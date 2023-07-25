@@ -93,10 +93,12 @@ double rangeDistance(const RTree& rtree1,
         double res1 = 0.0;
         double res2 = 0.0;
         for (int k = 0; k < vec1.size(); k++) {
-            res1 = res1 + (double) vec1[k].value();
+            // res1 = res1 + (double) vec1[k].value();
+            res1 = res1 + (double) vec1[k].value() * vec1[k].count(); 
             }
         for (int k = 0; k < vec2.size(); k++) {
-            res2 = res2 + (double) vec2[k].value();
+            // res2 = res2 + (double) vec2[k].value();
+            res2 = res2 + (double) vec2[k].value() * vec2[k].count();
             } 
         /** sc changed here END **/
 
